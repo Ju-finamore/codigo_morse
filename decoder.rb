@@ -1,9 +1,9 @@
 require "morse"
 
-def
-
+def decode(morse_text)
+  morse_text.split('|').map { |morse_word| decode_word(morse_word) }.join(' ')
 end
 
-def
-
+def decode_word(morse_word)
+  morse_word.split(' ').map { |morse_letter| MORSE.key(morse_letter) }.join
 end
